@@ -1,5 +1,21 @@
 version: '3.8'
 services:
+  app:
+   depends_on:
+     - postgresql
+     - redis
+   build:
+      context: .
+      dockerfile: dockerfile
+   restart: always
+   ports:
+      - 3001:3000
+   volumes:
+      - .:/home/node/api 
+   networks:
+    - api
+
+
   postgresql:
     image: 'bitnami/postgresql:latest'
     restart: always
@@ -11,6 +27,9 @@ services:
       - '5432:5432'
     volumes:
       - '.docker/postgresql_data:/bitnami/postgresql/data'
+    networks:
+     - api
+
 
   redis:
     image: 'bitnami/redis:latest'
@@ -21,3 +40,8 @@ services:
       - '6379:6379'
     volumes:
       - '.docker/redis_data:/bitnami/redis/data'
+    networks:
+      - api
+
+networks:
+      api:

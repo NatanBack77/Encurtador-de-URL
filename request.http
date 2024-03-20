@@ -1,4 +1,4 @@
-POST http://localhost:3000/api/links/
+POST http://localhost:3001/api/links/
 Content-Type: application/json
 
 {
@@ -13,5 +13,10 @@ GET http://localhost:3000/api/links/
 
 ###
 
-GET   http://localhost:3000/code
+GET   http://localhost:3000/Rocksteat
+
+###
+
+GET   http://localhost:3000/api/metrics
+
 

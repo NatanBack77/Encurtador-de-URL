@@ -1,2 +1,3 @@
 node_modules
-.docker
+.docker/postgresql_data
+.docker/redis_data

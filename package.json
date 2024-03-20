@@ -1,7 +1,6 @@
 {
   "name": "fastify",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
@@ -20,5 +19,6 @@
     "postgres": "^3.4.3",
     "redis": "^4.6.13",
     "zod": "^3.22.4"
-  }
+  },
+  "description": ""
 }
