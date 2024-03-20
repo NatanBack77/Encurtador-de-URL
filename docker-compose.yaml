@@ -16,7 +16,7 @@ services:
     image: 'bitnami/redis:latest'
     restart: always
     environment:
-      - REDIS_PASSWORD=myredispassword
+      - REDIS_PASSWORD=docker
     ports:
       - '6379:6379'
     volumes:
